@@ -10,11 +10,11 @@ Prime number generation is non-trivial. Sieves are a good help.
 
 *My favorite : Ulam Sprial [http://en.wikipedia.org/wiki/Ulam_spiral]*
 
-![Ulam Spiral](https://raw.github.com/nrshrivatsan/ulamspiral/master/Ulam-Spiral-21.png "Ulam Spiral")
+![Ulam Spiral](https://raw.github.com/nrshrivatsan/ulamspiral/master/Ulam-Spiral-21.jpg "Ulam Spiral")
 
 *My contribution : Vatsan Spiral [http://thinkination.blogspot.com/2013/07/vatsan-spiral.html]*
 
-![Vatsan Spiral](https://raw.github.com/nrshrivatsan/ulamspiral/master/Vatsan-spiral-21.png "Vatsan Spiral")
+![Vatsan Spiral](https://raw.github.com/nrshrivatsan/ulamspiral/master/Vatsan-spiral-21.jpg "Vatsan Spiral")
 
 This repo in Git is about creating a simple approach towards understanding primes in a better way.
 
