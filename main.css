@@ -60,7 +60,7 @@ button{
 	color : red;
 }
 #footer{
-	position: fixed;
+	position: relative;
 	bottom : 10%;
 	left : 10%;
 	//text-align: center;
