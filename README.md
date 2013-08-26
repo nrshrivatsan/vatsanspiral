@@ -16,6 +16,14 @@ Prime number generation is non-trivial. Sieves are a good help.
 
 ![Vatsan Spiral](https://raw.github.com/nrshrivatsan/ulamspiral/master/Vatsan-spiral-21.jpg "Vatsan Spiral")
 
+**Vatsan Spiral QR**
+===================
+A pixel-ated version of Vatsan spiral 51 x 51! Look deep to view patterns in primes!
+
+![Vatsan Spiral QR 51 ](https://raw.github.com/nrshrivatsan/ulamspiral/master/Images/V51-QR.png "Vatsan Spiral QR 51")
+
+
+
 This repo in Git is about creating a simple approach towards understanding primes in a better way.
 
 
