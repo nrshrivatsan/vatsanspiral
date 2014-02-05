@@ -20,7 +20,7 @@ Prime number generation is non-trivial. Sieves are a good help.
 ===================
 A pixel-ated version of Vatsan spiral 51 x 51! Look deep to view patterns in primes!
 
-![Vatsan Spiral QR 51 ](https://raw.github.com/nrshrivatsan/ulamspiral/master/master/js/Images/V51-QR.png  "Vatsan Spiral QR 51")
+![Vatsan Spiral QR 51 ](https://raw.github.com/nrshrivatsan/ulamspiral/master/js/Images/V51-QR.png  "Vatsan Spiral QR 51")
 
 
 
