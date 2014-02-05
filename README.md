@@ -10,17 +10,17 @@ Prime number generation is non-trivial. Sieves are a good help.
 
 *My favorite : Ulam Sprial [http://en.wikipedia.org/wiki/Ulam_spiral]*
 
-![Ulam Spiral](https://raw.github.com/nrshrivatsan/ulamspiral/master/Ulam-Spiral-21.jpg "Ulam Spiral")
+![Ulam Spiral](https://raw.github.com/nrshrivatsan/ulamspiral/master/js/Ulam-Spiral-21.jpg "Ulam Spiral")
 
 *My contribution : Vatsan Spiral [http://thinkination.blogspot.com/2013/07/vatsan-spiral.html]*
 
-![Vatsan Spiral](https://raw.github.com/nrshrivatsan/ulamspiral/master/Vatsan-spiral-21.jpg "Vatsan Spiral")
+![Vatsan Spiral](https://raw.github.com/nrshrivatsan/ulamspiral/master/js/Vatsan-spiral-21.jpg "Vatsan Spiral")
 
 **Vatsan Spiral QR**
 ===================
 A pixel-ated version of Vatsan spiral 51 x 51! Look deep to view patterns in primes!
 
-![Vatsan Spiral QR 51 ](https://raw.github.com/nrshrivatsan/ulamspiral/master/Images/V51-QR.png "Vatsan Spiral QR 51")
+![Vatsan Spiral QR 51 ](https://raw.github.com/nrshrivatsan/ulamspiral/master/master/js/Images/V51-QR.png "Vatsan Spiral QR 51")
 
 
 
