@@ -1,0 +1,67 @@
+body{
+	//font-family: 'Verdana','sans-serif';
+	color: #00CCCC;
+}
+table{
+	font-size: xx-small;
+	text-align:center; 
+	//cellspacing: "0px";
+	border : 0px;
+}
+td.even, .evens {
+	color : grey;
+	background-color: white;
+}
+input[type=checkbox]{
+	//overflow: hidden; 
+	clip: rect(1 1 1 1); 
+	//height:1px; 
+	//width:1px; 
+	//margin:-1px; 
+	padding:1%;
+	border:1px;
+	color : #00CCCC;
+	background-color: #00CCCC;
+}
+
+input[type=text]{ 
+	margin:1%; 
+	padding:1%;
+	color: #00CCCC;
+	border : 1px #00CCCC solid;
+}
+
+td.odd , .odds{
+	color : #00CCCC;	
+}
+
+td.prime , .prime{
+	color : white;
+	background-color: #00CCCC;
+
+}
+div.evens, div.odds, div.prime,  #dimlimit{
+	display : inline;
+}
+
+#tagline,#header{
+	color: #00CCCC;
+	padding-left : .5%;
+	padding-right : .5%;
+}	
+
+button{
+	color : white;
+	background-color: #00CCCC;
+	border : 0px;
+	padding : .5%;
+}
+#warning{
+	color : red;
+}
+#footer{
+	position: relative;
+	bottom : 10%;
+	left : 10%;
+	//text-align: center;
+}
