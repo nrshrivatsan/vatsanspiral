@@ -1,4 +1,4 @@
-Ulamspiral
+Vatsan spiral
 ==========
 
 **Motivation** 
