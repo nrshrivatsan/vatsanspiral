@@ -23,17 +23,21 @@ const south string = "south"
 
 func show(matrix *[][]int){
      u := *matrix;
-    fmt.Println("Mid x :",midx)
-    fmt.Println("Mid y :",midy)
-    fmt.Println();
-    fmt.Println("Matrix :")
+    // fmt.Println("Mid x :",midx)
+    // fmt.Println("Mid y :",midy)
+    // fmt.Println();
+    // fmt.Println("Matrix :")
     var i int64;
     var j int64;
     for i=0;i<dimension; i++ {
         for j=0;j<dimension; j++ {
-            fmt.Print(" ",u[i][j]);
+        	// u[i][j] := u[i][j]
+        	if ( u[i][j] != 0 ) {
+        		u[i][j] = 1
+        	}
+            fmt.Print(" ",u[i][j])
         }
-            fmt.Println();
+            fmt.Println()
     }
 }
 
@@ -96,7 +100,7 @@ func walk(u *[][]int){
 			if(h==maxima&&v==maxima){
 				if(maxima+1>=dimension||minima-1<0){
 					break;
-					fmt.Println(" Terminate")
+					// fmt.Println(" Terminate")
 				}else{
 					//fmt.Println(" Make Progress")
 					maxima++;
@@ -176,8 +180,9 @@ func load(){
 
 func main(){
   var i int64;
-  fmt.Println("Enter Dimensions of Ulam ")  
-  fmt.Scanf("%d",&dimension);
+  dimension = 191;
+  fmt.Println("Dimensions of Ulam",dimension)  
+  // fmt.Scanf("%d",&dimension);
   load();
   matrix := make([][] int, dimension)
 	for j := range matrix {
