@@ -2,6 +2,8 @@ package main
 
 import ( 
     "fmt"
+    "os"
+    "strconv"
     // "sort"
 )
 
@@ -23,15 +25,11 @@ const south string = "south"
 
 func show(matrix *[][]int){
      u := *matrix;
-    // fmt.Println("Mid x :",midx)
-    // fmt.Println("Mid y :",midy)
-    // fmt.Println();
-    // fmt.Println("Matrix :")
+ 
     var i int64;
     var j int64;
     for i=0;i<dimension; i++ {
         for j=0;j<dimension; j++ {
-        	// u[i][j] := u[i][j]
         	if ( u[i][j] != 0 ) {
         		u[i][j] = 1
         	}
@@ -180,8 +178,13 @@ func load(){
 
 func main(){
   var i int64;
-  dimension = 191;
-  fmt.Println("Dimensions of Ulam",dimension)  
+  // dimension = 1989;
+
+  //Parsing input argument
+  dimension,_ = strconv.ParseInt(os.Args[1], 0, 64)
+  // dimension = (x)
+  // fmt.Println(dimension)
+  // fmt.Println("Dimensions of Ulam",dimension)  
   // fmt.Scanf("%d",&dimension);
   load();
   matrix := make([][] int, dimension)
@@ -189,7 +192,7 @@ func main(){
 		matrix[j] = make([] int, dimension )
 	}
   u = &matrix;
-  fmt.Println("Ulam dimentions",dimension,"\n\n");
+  // fmt.Println("Ulam dimentions",dimension,"\n\n");
     for i=0; i<dimension ; i++ {
         matrix[i][i] = 1;
     }
