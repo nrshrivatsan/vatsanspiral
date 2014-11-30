@@ -177,6 +177,7 @@ func load(){
 }
 
 func main(){
+  fmt.Println(len(primes))
   var i int64;
   // dimension = 1989;
 
