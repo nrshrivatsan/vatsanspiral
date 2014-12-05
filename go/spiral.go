@@ -4,6 +4,12 @@ import (
     "fmt"
     "os"
     "strconv"
+    "bufio"
+     "image"
+     "image/color"
+     "image/draw"
+     "image/jpeg"
+     
     // "sort"
 )
 
@@ -23,20 +29,61 @@ const east string = "east"
 const west string = "west"
 const south string = "south"
 
+//Image manipulation constants
+
+var width int = 9800;
+var height int = 9800;
+
+var x0 int= 5
+var y0 int= 5
+var x1 int= 10
+var y1 int= 10
+var incr int = 5;
+
+var prime color.RGBA = color.RGBA{0, 255, 255, 0}
+var composite color.RGBA = color.RGBA{255, 255, 255, 255}
+
+var img *image.RGBA = image.NewRGBA(image.Rect(0, 0, width, height))
+
+func writeImageTofile(){
+     if imgFileJpeg, err := os.Create(strconv.Itoa(int(dimension))+".jpeg"); err != nil {
+         fmt.Println("Jpeg error: ", err)
+     } else {
+         defer imgFileJpeg.Close()
+         jpeg.Encode(bufio.NewWriter(imgFileJpeg), img,&jpeg.Options{jpeg.DefaultQuality})
+     }
+}
+
 func show(matrix *[][]int){
      u := *matrix;
  
     var i int64;
     var j int64;
     for i=0;i<dimension; i++ {
+
+    	 //Relocating the horizontal cursor to the starting of the image
+        x0 = 0
+        x1 = incr
+
         for j=0;j<dimension; j++ {
         	if ( u[i][j] != 0 ) {
         		u[i][j] = 1
+        		go draw.Draw(img, image.Rect(x0, y0, x1, y1), &image.Uniform{prime},image.ZP, draw.Src)
+        	}else{
+        		 go draw.Draw(img, image.Rect(x0, y0, x1, y1), &image.Uniform{composite},image.ZP, draw.Src)
         	}
-            fmt.Print(" ",u[i][j])
+        	//Navigating the horizontal cursors to the left
+                x0 += incr;
+                x1 += incr;
+            // fmt.Print(" ",u[i][j])
         }
-            fmt.Println()
+            // fmt.Println()
+        //Navigating the vertical cursors to one step below the current position   
+        y1 += incr;
+        y0 += incr;   
     }
+
+    writeImageTofile();
 }
 
 func increment() int {
