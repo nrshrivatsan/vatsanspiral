@@ -20,9 +20,7 @@ Prime number generation is non-trivial. Sieves are a good help.
 ===================
 A pixel-ated version of Vatsan spiral 51 x 51! Look deep to view patterns in primes!
 
-![Vatsan Spiral QR 51 ](https://raw.github.com/nrshrivatsan/ulamspiral/master/js/Images/V51-QR.png  "Vatsan Spiral QR 51")
-
-![Vatsan Spiral in pixels - 19001 is the dimension of matrix](https://raw.githubusercontent.com/nrshrivatsan/vatsanspiral/master/go/19001.png) "Vatsan Spiral 19001 binary color code"
+![Vatsan Spiral QR 599 ](https://raw.githubusercontent.com/nrshrivatsan/vatsanspiral/master/go/599.jpeg "Vatsan Spiral QR 599")
 
 This repo in Git is about creating a simple approach towards understanding primes in a better way.
 
