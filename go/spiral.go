@@ -220,7 +220,7 @@ func load(){
 		midy = dimension/2;
 	}
 	num = 1;
-	delta = 1;
+	delta = 2;
 }
 
 func main(){
