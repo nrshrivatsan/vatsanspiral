@@ -18,9 +18,9 @@ Prime number generation is non-trivial. Sieves are a good help.
 
 **Vatsan Spiral QR**
 ===================
-A pixel-ated version of Vatsan spiral 51 x 51! Look deep to view patterns in primes!
+A pixel-ated version of Vatsan spiral! Look deep to view patterns in primes!
 
-![Vatsan Spiral QR 599 ](https://raw.githubusercontent.com/nrshrivatsan/vatsanspiral/master/go/599.jpeg "Vatsan Spiral QR 599")
+![Vatsan Spiral QR 255 ](https://raw.githubusercontent.com/nrshrivatsan/vatsanspiral/master/go/555.jpeg "Vatsan Spiral QR 255")
 
 This repo in Git is about creating a simple approach towards understanding primes in a better way.
 
