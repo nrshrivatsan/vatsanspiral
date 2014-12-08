@@ -4,12 +4,14 @@ import (
     "fmt"
     "os"
     "strconv"
-    "bufio"
-     "image"
-     "image/color"
-     "image/draw"
-     "image/jpeg"
-     
+    // "bufio"
+    "image"
+    "image/color"
+     // "image/draw"
+    // "image/jpeg"  
+    "image/png"    
+	"image/draw"
+	"sync"
     // "sort"
 )
 
@@ -31,8 +33,8 @@ const south string = "south"
 
 //Image manipulation constants
 
-var width int = 9800;
-var height int = 9800;
+var width int = int(dimension);
+var height int = int(dimension);
 
 var x0 int= 5
 var y0 int= 5
@@ -45,14 +47,26 @@ var composite color.RGBA = color.RGBA{255, 255, 255, 255}
 
 var img *image.RGBA = image.NewRGBA(image.Rect(0, 0, width, height))
 
+// func writeImageTofile(){
+//      if imgFileJpeg, err := os.Create(strconv.Itoa(int(dimension))+".jpeg"); err != nil {
+//          fmt.Println("Jpeg error: ", err)
+//      } else {
+//          defer imgFileJpeg.Close()
+//          jpeg.Encode(bufio.NewWriter(imgFileJpeg), img,&jpeg.Options{jpeg.DefaultQuality})
+//      }
+// }
+
 func writeImageTofile(){
-     if imgFileJpeg, err := os.Create(strconv.Itoa(int(dimension))+".jpeg"); err != nil {
-         fmt.Println("Jpeg error: ", err)
+     if imgFilePng, err := os.Create(strconv.Itoa(int(dimension))+".png"); err != nil {
+         fmt.Println("Png error: ", err)
      } else {
-         defer imgFileJpeg.Close()
-         jpeg.Encode(bufio.NewWriter(imgFileJpeg), img,&jpeg.Options{jpeg.DefaultQuality})
+         defer imgFilePng.Close()
+         // png.Encode(bufio.NewWriter(imgFilePng), m)
+         png.Encode(imgFilePng, m) //Encode writes the Image m to w in PNG format.
+
      }
 }
+
 
 func show(matrix *[][]int){
      u := *matrix;
@@ -68,23 +82,70 @@ func show(matrix *[][]int){
         for j=0;j<dimension; j++ {
         	if ( u[i][j] != 0 ) {
         		u[i][j] = 1
-        		go draw.Draw(img, image.Rect(x0, y0, x1, y1), &image.Uniform{prime},image.ZP, draw.Src)
+        		// go draw.Draw(img, image.Rect(x0, y0, x1, y1), &image.Uniform{prime},image.ZP, draw.Src)
         	}else{
-        		 go draw.Draw(img, image.Rect(x0, y0, x1, y1), &image.Uniform{composite},image.ZP, draw.Src)
+        		 // go draw.Draw(img, image.Rect(x0, y0, x1, y1), &image.Uniform{composite},image.ZP, draw.Src)
         	}
         	//Navigating the horizontal cursors to the left
-                x0 += incr;
-                x1 += incr;
+                // x0 += incr;
+                // x1 += incr;
             // fmt.Print(" ",u[i][j])
         }
             // fmt.Println()
         //Navigating the vertical cursors to one step below the current position   
-        y1 += incr;
-        y0 += incr;   
+        // y1 += incr;
+        // y0 += incr;   
     }
 
-    writeImageTofile();
+    setPixels(u)
+    // writeImageTofile();
 }
+
+var (
+	white  color.Color = color.RGBA{255, 255, 255, 255}
+	black  color.Color = color.RGBA{0, 0, 0, 255}
+	// red    color.Color = color.RGBA{125, 0, 0, 255}
+	// blue   color.Color = color.RGBA{0, 0, 255, 255}
+	// cyan   color.Color = color.RGBA{0, 255, 255, 255}
+	pngWidth  int = int(dimension)
+	pngHeight int = int(dimension)
+	m *image.RGBA = image.NewRGBA(image.Rect(0, 0, pngWidth, pngHeight)) //*NRGBA (image.Image interface)
+	// fileName string = "i.png"
+)
+
+func setPixels( array [][]int ) {
+	var wg sync.WaitGroup 
+
+	draw.Draw(m, m.Bounds(), &image.Uniform{white}, image.ZP, draw.Src)
+	pngWidth  = int(dimension)
+	pngHeight = int(dimension)
+	m = image.NewRGBA(image.Rect(0, 0, pngWidth, pngHeight)) //*NRGBA (image.Image interface)
+	
+	for i, _ := range array {
+		for j, _ := range array {
+			if array[i][j] == 1 {
+				wg.Add(1)
+				go func( i int, j int ) {
+					 m.Set(j, i, black)
+					 defer wg.Done()
+				}(i,j)
+			
+			} else {
+				wg.Add(1)
+
+			go func( i int, j int ) {
+					 m.Set(j, i, white)
+					 defer wg.Done()
+				}(i,j)
+			}
+		}
+	}
+
+	wg.Wait()
+	// WriteToFile()
+	writeImageTofile()
+}
+
 
 func increment() int {
 	num+=delta;
@@ -221,10 +282,13 @@ func load(){
 	}
 	num = 1;
 	delta = 2;
+	width = int(dimension);
+	height = int(dimension);
+
 }
 
 func main(){
-  fmt.Println(len(primes))
+  // fmt.Println(len(primes))
   var i int64;
   // dimension = 1989;
 
