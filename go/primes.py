@@ -18,7 +18,7 @@ def _primes():
 def main():    
     pz = []
     for p in _primes():
-        if p > 1500001:
+        if p > 150000001:
             break
         # print p,
         pz.append(p)
