@@ -52,15 +52,17 @@ func show(matrix *[][]int64) {
 	// fmt.Println(u[dimension-2])
 	for i = 0; i < dimension; i++ {
 		for j = 0; j < dimension; j++ {
-			if u[i][j] != 0 {
-				u[i][j] = 1
-			}
-			// fmt.Print(" ",u[i][j])
+			// if u[i][j] != 0 {
+			// 	u[i][j] = 1
+			// }
+			fmt.Print(" ");
+			fmt.Print(u[i][j]);
+			// fmt.Printf(" %4d",u[i][j])
 
 		}
-		// fmt.Println()
+		fmt.Println()
 	}
-	setPixels(u)
+	// setPixels(u)
 }
 
 var (
@@ -131,6 +133,20 @@ func setPixels(array [][]int64) {
 
 func increment() int64 {
 	num += delta
+	
+
+	if num % 2 == 0 {
+		num += 1
+	}
+	// fmt.Println(num,num%10)
+	
+	//Skip multiples of 5
+	if num %10 == 5 {
+		// println(num)
+		num += 2
+	}
+
+
 	return num
 }
 
@@ -154,8 +170,10 @@ func BinarySearch(value int64) bool {
 }
 
 func getInferredNumber(num int64) int64 {
-	if num%2 == 0 || !BinarySearch(num) {
+	if !BinarySearch(num) {
 		num = 0
+	} else{
+		num = 1
 	}
 	return num
 }
@@ -252,7 +270,7 @@ func load() {
 		midy = dimension / 2
 	}
 	num = 1
-	delta = 2
+	delta = 1
 	width = int(dimension)
 	height = int(dimension)
 
