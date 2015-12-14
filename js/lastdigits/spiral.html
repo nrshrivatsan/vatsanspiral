@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<script src="spiral.js"></script>
+		<script src="jquery.js"></script>
+	    <link rel="stylesheet" type="text/css" href="main.css">
+	</head>
+	<body onload="init();">
+		<center>
+			<div id="container">
+				<div id="header">
+					<h2> Prime spiral
+					</h2>
+				</div>
+				<div id="tagline">
+					<h3>
+						An open approach towards understanding primes!
+					</h3>
+				</div>
+				Enter an odd number less than <div id="dimlimit"> 200 </div>
+				<input type="text" name="dimension" id="dimension"/>
+				<button onclick="trigger('ulam');" id='show'>Show ULAM Spiral</button>
+				<button onclick="trigger('vatsan');" id='show'>Show Vatsan Spiral</button>
+				<button onclick="clearScreen();" id='clear'>Clear Screen</button>
+
+				<form>
+					<input type="checkbox" id="numbers">Show numbers?
+				</form>
+				<div id="warning" >
+				</div>
+			</div>
+			<div id="contents">
+				<table id='table'>
+				</table>
+			<div id="footer">
+				Key : <span class="evens">Evens #s</span>, <span class="odds">Odds #s</span>, <span class="prime">Prime #s</span> , <span class="one">Prime Ending with 1 #s</span>, <span class="three">Prime Ending with 3 #s</span>,<span class="seven">Prime Ending with 7 #s</span>, <span class="nine">Prime Ending with 9 #s</span>
+			</div>
+		</center>
+	</body>
+</html>
