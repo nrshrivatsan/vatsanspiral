@@ -19,3 +19,4 @@ This folder has code moving toward that.
 - Are there patterns in peds of large size primes like Messner Primes?
 - Could color coded Ulam Spiral with a unique color per PED give better patterns?
 - Could color coded Vatsan Spiral with a unique color per PED give better patterns?
+- Do dihedral angles of Polytypes endup closest to prime numbers? [Math Exchange Question](https://math.stackexchange.com/questions/2945044/is-there-a-link-between-higher-dimensions-and-prime-numbers)
