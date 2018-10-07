@@ -21,6 +21,11 @@ https://youtu.be/h-_yl3vPf6w
 * The gaps between these primes are a STRAIGHT LINE!
 * http://www.wolframalpha.com/input/?i=482+498+514+530+546+562+578+594
 
+### Pattern 2
+* 3929	3583	3253	2939 are primes 
+* Prime gaps for these form an acute scalene triagle
+* http://www.wolframalpha.com/input/?i=346+330+314
+
 ## **Motivation** 
 ==============
 
