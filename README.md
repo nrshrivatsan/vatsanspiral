@@ -15,6 +15,12 @@ https://youtu.be/h-_yl3vPf6w
          wmode="transparent" width="425" height="350" />
 </object>
 
+## Results
+### Pattern 1 
+* 7079	7561	8059	8573	9103	9649	10211	10789	11383 are primes
+* The gaps between these primes are a STRAIGHT LINE!
+* http://www.wolframalpha.com/input/?i=482+498+514+530+546+562+578+594
+
 ## **Motivation** 
 ==============
 
