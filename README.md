@@ -1,7 +1,12 @@
-Vatsan spiral
+#Vatsan spiral
 ==========
 
-**Motivation** 
+## TL;DR
+
+https://github.com/nrshrivatsan/vatsanspiral/tree/master/js#tldr
+
+
+## **Motivation** 
 ==============
 
 Prime numbers are 'Prime'. They piqued my interest.
