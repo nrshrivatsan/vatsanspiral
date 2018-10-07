@@ -15,16 +15,73 @@ https://youtu.be/h-_yl3vPf6w
          wmode="transparent" width="425" height="350" />
 </object>
 
-## Results
-### Pattern 1 
-* 7079	7561	8059	8573	9103	9649	10211	10789	11383 are primes
-* The gaps between these primes are a STRAIGHT LINE!
-* http://www.wolframalpha.com/input/?i=482+498+514+530+546+562+578+594
+## Resulting Patterns
 
-### Pattern 2
-* 3929	3583	3253	2939 are primes 
-* Prime gaps for these form an acute scalene triagle
-* http://www.wolframalpha.com/input/?i=346+330+314
+- Below is a table with observations
+- *Prime Numbers* in first column
+- *Prime Gaps* Second column has the difference between the prime number in current row and the next row
+- *Prime Gap Diff* Third column has the difference between the Prime Gaps ALWAYS **`16`**
+- Fourth column referes to the Wolfram Alpfa analysis of the series of prime-gaps (elegant expressions representing them)
+#### Linear Prime Sequences of Vatsan Spiral
+
+|Prime Number|Prime Gaps (PG)|Primal-Gap Diff|Wolfram link for Prime Gap Diff|
+|----|----|-----|-----|
+|7079|482|**`16`**|http://www.wolframalpha.com/input/?i=482+498+514+530+546+562+578+594
+|7561|498|**`16`**|
+|8059|514|**`16`**|
+|8573|530|**`16`**|
+|9103|546|**`16`**|
+|9649|562|**`16`**|
+|10211|578|**`16`**|
+|10789|594||
+|11383|||
+||||
+|3929|346|**`16`**|http://www.wolframalpha.com/input/?i=346+330+314
+|3583|330|**`16`**|
+|3253|314||
+|2939|||
+||||
+|5821|422|**`16`**|http://www.wolframalpha.com/input/?i=422+406+390+374
+|5399|406|**`16`**|
+|4993|390|**`16`**|
+|4603|374||
+|4229|||
+||||
+|7933|510|**`16`**|http://www.wolframalpha.com/input/?i=510+526+542+558
+|8443|526|**`16`**|
+|8969|542|**`16`**|
+|9511|558||
+|10069|||
+
+#### Diagonal Prime Sequences of Vatsan Spiral
+
+|Prime Number|Prime Gaps (PG)|Primal-Gap Diff|Wolfram Alpha link|
+|---|----|----|----|
+|9007|544|`**16**`|http://www.wolframalpha.com/input/?i=544+560+576+592+608+624+640+656+672
+|9551|560|`**16**`|
+|10111|576|`**16**`|
+|10687|592|`**16**`|
+|11279|608|`**16**`|
+|11887|624|`**16**`|
+|12511|640|`**16**`|
+|13151|656|`**16**`|
+|13807|672||
+|14479|||
+|||
+|3391|336|`**16**`|http://www.wolframalpha.com/input/?i=336+352+368+384+400+416+432
+|3727|352|`**16**`|
+|4079|368|`**16**`|
+|4447|384|`**16**`|
+|4831|400|`**16**`|
+|5231|416|`**16**`|
+|5647|432||
+|6079|||
+
+## Significance
+
+- From above patterns Diagonal and Linear, one could make sense that the Prime-gaps are interleaved by 16.
+- Once a system of equations could be drafted to characterize the Prime Numbers and the Prime-gaps, elegant equations to predict prime numbers.
+- May be in a remote way Reimann's hypothesis could be addressed
 
 ## **Motivation** 
 ==============
